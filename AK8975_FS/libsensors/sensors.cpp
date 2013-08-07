@@ -66,7 +66,7 @@ static const struct sensor_t sSensorList[] = {
           1,
 		  SENSORS_MAGNETIC_FIELD_HANDLE,
           SENSOR_TYPE_MAGNETIC_FIELD, 1228.8f,
-		  CONVERT_M, 0.35f, 10000, { } },
+		  CONVERT_M, 0.35f, 10000, 0, 0, { } },
 #ifdef SENSORHAL_ACC_ADXL346
         { "Analog Devices ADXL345/6 3-axis Accelerometer",
           "ADI",
@@ -77,7 +77,7 @@ static const struct sensor_t sSensorList[] = {
           "Asahi Kasei Microdevices",
           1, SENSORS_ORIENTATION_HANDLE,
           SENSOR_TYPE_ORIENTATION, 360.0f,
-		  CONVERT_O, 0.495f, 10000, { } }
+		  CONVERT_O, 0.495f, 10000, 0, 0, { } }
 #endif
 #ifdef SENSORHAL_ACC_KXTF9
         { "Kionix KXTF9 3-axis Accelerometer",
@@ -89,7 +89,7 @@ static const struct sensor_t sSensorList[] = {
           "Asahi Kasei Microdevices",
           1, SENSORS_ORIENTATION_HANDLE,
           SENSOR_TYPE_ORIENTATION, 360.0f,
-		  CONVERT_O, 1.05f, 10000, { } }
+		  CONVERT_O, 1.05f, 10000, 0, 0, { } }
 #endif
 };
 
