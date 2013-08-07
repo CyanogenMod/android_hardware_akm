@@ -72,7 +72,7 @@ static const struct sensor_t sSensorList[] = {
           "ADI",
           1, SENSORS_ACCELERATION_HANDLE,
           SENSOR_TYPE_ACCELEROMETER, (GRAVITY_EARTH * 16.0f),
-		  (GRAVITY_EARTH * 16.0f) / 4096.0f, 0.145f, 10000, { } },
+		  (GRAVITY_EARTH * 16.0f) / 4096.0f, 0.145f, 10000, 0, 0, { } },
         { "AK8975 Orientation sensor",
           "Asahi Kasei Microdevices",
           1, SENSORS_ORIENTATION_HANDLE,
