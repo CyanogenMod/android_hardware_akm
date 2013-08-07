@@ -84,7 +84,7 @@ static const struct sensor_t sSensorList[] = {
           "Kionix",
           1, SENSORS_ACCELERATION_HANDLE,
           SENSOR_TYPE_ACCELEROMETER, (GRAVITY_EARTH * 2.0f),
-		  (GRAVITY_EARTH) / 1024.0f, 0.7f, 10000, { } },
+		  (GRAVITY_EARTH) / 1024.0f, 0.7f, 10000, 0,0, { } },
         { "AK8975 Orientation sensor",
           "Asahi Kasei Microdevices",
           1, SENSORS_ORIENTATION_HANDLE,
