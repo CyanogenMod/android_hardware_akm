@@ -98,27 +98,27 @@ static int open_sensors(const struct hw_module_t* module, const char* id,
                         struct hw_device_t** device);
 
 static int sensors__get_sensors_list(struct sensors_module_t* module,
-                                     struct sensor_t const** list) 
+                                     struct sensor_t const** list)
 {
         *list = sSensorList;
         return ARRAY_SIZE(sSensorList);
 }
 
 static struct hw_module_methods_t sensors_module_methods = {
-        open: open_sensors
+        .open = open_sensors
 };
 
 struct sensors_module_t HAL_MODULE_INFO_SYM = {
-        common: {
-                tag: HARDWARE_MODULE_TAG,
-                version_major: 1,
-                version_minor: 0,
-                id: SENSORS_HARDWARE_MODULE_ID,
-                name: "AKM Sensor module",
-                author: "Asahi Kasei Microdevices",
-                methods: &sensors_module_methods,
+        .common = {
+                .tag = HARDWARE_MODULE_TAG,
+                .version_major = 1,
+                .version_minor = 0,
+                .id = SENSORS_HARDWARE_MODULE_ID,
+                .name = "AKM Sensor module",
+                .author = "Asahi Kasei Microdevices",
+                .methods = &sensors_module_methods,
         },
-        get_sensors_list: sensors__get_sensors_list,
+        .get_sensors_list = sensors__get_sensors_list,
 };
 
 struct sensors_poll_context_t {
@@ -145,7 +145,7 @@ private:
     int mWritePipeFd;
     SensorBase* mSensors[numSensorDrivers];
 
-	/* These function will be different depends on 
+	/* These function will be different depends on
 	 * which sensor is implemented in AKMD program.
 	 */
     int handleToDriver(int handle);
@@ -266,7 +266,7 @@ int sensors_poll_context_t::setDelay_sub(int handle, int64_t ns) {
 		/* has dependencies, choose shorter interval */
 		if (cur > ns) {
 			err = mSensors[drv]->setDelay(handle, ns);
-		} 
+		}
 	}
 	return err;
 }
