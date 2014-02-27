@@ -1,5 +1,3 @@
-ifneq ($(TARGET_SIMULATOR),true)
-
 LOCAL_PATH:= $(call my-dir)
 
 # dmtd
@@ -9,7 +7,6 @@ AKM_FS_LIB=AKFS_APIs_8975
 include $(CLEAR_VARS)
 
 LOCAL_C_INCLUDES := \
-	$(KERNEL_HEADERS) \
 	$(LOCAL_PATH)/$(AKM_FS_LIB)
 
 LOCAL_SRC_FILES:= \
@@ -36,7 +33,3 @@ LOCAL_MODULE_TAGS := optional
 LOCAL_FORCE_STATIC_EXECUTABLE := false
 LOCAL_SHARED_LIBRARIES := libc libm libutils libcutils
 include $(BUILD_EXECUTABLE)
-
-
-endif  # TARGET_SIMULATOR != true
-
