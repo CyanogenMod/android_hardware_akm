@@ -66,30 +66,30 @@ static const struct sensor_t sSensorList[] = {
           1,
 		  SENSORS_MAGNETIC_FIELD_HANDLE,
           SENSOR_TYPE_MAGNETIC_FIELD, 1228.8f,
-		  CONVERT_M, 0.35f, 10000, 0, 0, 0, 0, { } },
+		  CONVERT_M, 0.35f, 10000, 0, 0, 0, 0, 0, 0, { } },
 #ifdef SENSORHAL_ACC_ADXL346
         { "Analog Devices ADXL345/6 3-axis Accelerometer",
           "ADI",
           1, SENSORS_ACCELERATION_HANDLE,
           SENSOR_TYPE_ACCELEROMETER, (GRAVITY_EARTH * 16.0f),
-		  (GRAVITY_EARTH * 16.0f) / 4096.0f, 0.145f, 10000, 0, 0, 0, 0, { } },
+		  (GRAVITY_EARTH * 16.0f) / 4096.0f, 0.145f, 10000, 0, 0, 0, 0, 0, 0, { } },
         { "AK8975 Orientation sensor",
           "Asahi Kasei Microdevices",
           1, SENSORS_ORIENTATION_HANDLE,
           SENSOR_TYPE_ORIENTATION, 360.0f,
-		  CONVERT_O, 0.495f, 10000, 0, 0, 0, 0, { } }
+		  CONVERT_O, 0.495f, 10000, 0, 0, 0, 0, 0, 0, { } }
 #endif
 #ifdef SENSORHAL_ACC_KXTF9
         { "Kionix KXTF9 3-axis Accelerometer",
           "Kionix",
           1, SENSORS_ACCELERATION_HANDLE,
           SENSOR_TYPE_ACCELEROMETER, (GRAVITY_EARTH * 2.0f),
-		  (GRAVITY_EARTH) / 1024.0f, 0.7f, 10000, 0, 0, 0, 0, { } },
+		  (GRAVITY_EARTH) / 1024.0f, 0.7f, 10000, 0, 0, 0, 0, 0, 0, { } },
         { "AK8975 Orientation sensor",
           "Asahi Kasei Microdevices",
           1, SENSORS_ORIENTATION_HANDLE,
           SENSOR_TYPE_ORIENTATION, 360.0f,
-		  CONVERT_O, 1.05f, 10000, 0, 0, 0, 0, { } }
+		  CONVERT_O, 1.05f, 10000, 0, 0, 0, 0, 0, 0, { } }
 #endif
 };
 
