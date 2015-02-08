@@ -118,6 +118,8 @@ struct sensors_module_t HAL_MODULE_INFO_SYM = {
                 .name = "AKM Sensor module",
                 .author = "Asahi Kasei Microdevices",
                 .methods = &sensors_module_methods,
+                .dso  = NULL,
+                .reserved = {0},
         },
         .get_sensors_list = sensors__get_sensors_list,
 };
